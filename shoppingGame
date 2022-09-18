@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc= new Scanner(System.in) ;
+        int t = sc.nextInt() ;
+        while(t>0){
+            int a= sc.nextInt() ;
+            int h= sc.nextInt() ;
+            int cnt=0 ;
+            while(a>=0 && h>=0){
+                ++cnt ;
+                a=a-cnt ;
+                ++cnt ;
+                h=h-cnt ;
+            }
+            if(a<0){
+                System.out.println("Harshit") ;
+            }
+            else{
+                System.out.println("Aayush") ;
+            }
+            t-=1 ;
+        }
+    }
+}
