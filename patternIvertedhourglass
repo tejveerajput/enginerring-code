@@ -1,0 +1,48 @@
+import java.util.*;
+public class Main {
+    public static void main (String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row=1;
+        int star=1,space=2*n-1;
+        int l=0;
+        abc ob=new abc();
+        
+        while(row<=2*n+1) {
+
+            ob.star(star,n);
+            int j=1;
+            while(j++<=space) System.out.print("  ");
+            int ww=n-l;
+            int k=star;
+            if(row==n+1){
+                k--;
+                ww++;
+            }
+            while(k-->0) System.out.print(ww++ +" ");
+
+            System.out.print("\n");
+            if(row<=n) {
+                star++;
+                space-=2;
+                l++;
+            }
+            
+            else {
+                l--;
+                star--;
+                space+=2;
+            }
+            row++;
+            
+        }
+    }
+}
+class abc {
+    void star(int k,int l) {
+       // int l=5;
+     /*   if(k>0)*/ while(k-->0) System.out.print(l--+" ");
+       // else while(k++<=5) System.out.print(k++);
+    }
+
+}
