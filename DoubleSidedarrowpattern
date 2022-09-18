@@ -1,0 +1,58 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row=1;
+        int space=n-1,space2=-1;
+        int star=1;
+        int l=1;
+        while(row<=n) {
+            int j=1;
+
+            while(j<=space)  {
+                System.out.print("  ");
+                j++;
+            }
+            j=1;
+            int jj=l;
+            while(j<=star) {
+                System.out.print(jj+" ");
+                j++;
+                jj--;
+            }
+            j=1;
+            while(j<=space2){
+                System.out.print("  ");
+                j++;
+            }
+            j=1;
+            if(row!=1&&row!=n) {
+            while(j<=star) {
+            System.out.print(++jj+" ");
+                j++;
+            }}
+            // star+=2;
+            // space--;
+            //Mirroring
+            if(row<=(n/2)) {
+                star++;
+
+                l++;
+                space-=2;
+                space2+=2;
+             //   l++
+            }
+            else {
+                space2-=2;
+                star--;
+                l--;
+                space+=2;
+              //  l--;
+            }
+            row++;
+            System.out.println();
+        }
+    }
+}
