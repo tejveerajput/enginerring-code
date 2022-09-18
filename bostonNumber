@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc= new Scanner(System.in) ;
+        int n= sc.nextInt() ;
+        int sum= sumofdigits(n) ;
+        int sum1=0 ;
+        int i=2 ;
+        while(i<=n){
+            while(n%i==0){
+                sum1 += sumofdigits(i) ;
+                n/=i ;
+            }
+            i++ ;
+        }
+        if(sum==sum1){
+            System.out.println(1); 
+        }
+        else{
+            System.out.println(0) ;
+        }
+
+    }
+    public static int sumofdigits(int a){
+        int sum =0 ;
+        while(a>0){
+            int rem= a%10 ;
+            sum+= rem ;
+            a/=10 ;
+        }
+        return sum ;
+    }
+}
