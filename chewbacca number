@@ -1,0 +1,17 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        String n=sc.nextLine();
+        int l=n.length();
+        int a=Integer.parseInt(n.substring(0,1));
+        if(a>4&&a<9)    a=9-a;
+        System.out.print(a);
+        for(int i=1;i<l;i++) {
+            a=Integer.parseInt(n.substring(i,i+1));
+            if(a>4) a=9-a;
+            System.out.print(a);
+        }
+    }
+}
